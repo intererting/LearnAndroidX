@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OnePixelActivityTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 窗体没有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 窗体不包含标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 窗体悬浮 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 自定义TitleBar时去掉多余的阴影-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 不允许窗体背景变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 窗体切换无动画-->
+        <item name="android:windowAnimationStyle">@null</item>
+        <!-- 禁用窗口的预览动画-->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowNoDisplay">false</item>
+    </style>
+
+    <declare-styleable name="Halo">
+        <attr name="haloShape">
+            <enum name="rect" value="0" />
+            <enum name="roundRect" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <attr name="haloColor" format="color" />
+        <attr name="haloDuration" format="integer" />
+        <attr name="haloWidth" format="dimension" />
+        <attr name="haloCornerRadius" format="dimension" />
+        <attr name="haloInsertEdge" format="dimension" />
+    </declare-styleable>
+
+    <style name="MyTextView" parent=""></style>
+
+    <style name="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="colorPrimary">#f00</item>
+    </style>
+</resources>
