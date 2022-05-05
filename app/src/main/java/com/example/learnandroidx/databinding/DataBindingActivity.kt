@@ -60,12 +60,12 @@ class DataBindingActivity : AppCompatActivity() {
 //            mBinding.testTextView.text = "haha testView changed"
 //            println(user.name)
 
-            mBinding.testViewStub.setOnInflateListener { stub, inflated ->
-                println("inflated")
-                inflated.innerViewStub.text = "changed"
-            }
-            //测试一下ViewStub和DataBinding结合的使用
-            mBinding.testViewStub.viewStub?.inflate()
+//            mBinding.testViewStub.setOnInflateListener { stub, inflated ->
+//                println("inflated")
+//                inflated.innerViewStub.text = "changed"
+//            }
+//            //测试一下ViewStub和DataBinding结合的使用
+//            mBinding.testViewStub.viewStub?.inflate()
         }
 
         testMaterialShapeDrawable()

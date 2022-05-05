@@ -31,6 +31,7 @@ class GlideActivity : AppCompatActivity(R.layout.activity_glide) {
         }
 
         var target = GlideApp.with(this)
+//            .asGif()
             .load("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3630447355,2094032427&fm=26&gp=0.jpg")
 //            .miniThumb(100)
 //            .transform(CircleCrop())

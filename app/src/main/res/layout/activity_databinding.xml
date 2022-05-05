@@ -39,11 +39,11 @@
             android:layout_height="wrap_content"
             android:text='@{mapData["name"]}' />
 
-        <ViewStub
-            android:id="@+id/testViewStub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout="@layout/viewstub_inflate" />
+<!--        <ViewStub-->
+<!--            android:id="@+id/testViewStub"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout="@layout/viewstub_inflate" />-->
 
         <Button
             android:id="@+id/shapeView"

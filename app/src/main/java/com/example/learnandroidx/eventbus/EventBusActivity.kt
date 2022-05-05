@@ -18,7 +18,7 @@ import org.greenrobot.eventbus.ThreadMode
 class EventBusActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        EventBus.builder().addIndex(MyEventBusIndex()).installDefaultEventBus();
+//        EventBus.builder().addIndex(MyEventBusIndex()).installDefaultEventBus();
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eventbus)
         testEventBus.setOnClickListener {

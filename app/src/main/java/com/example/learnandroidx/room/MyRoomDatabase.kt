@@ -12,7 +12,7 @@ import androidx.sqlite.db.SupportSQLiteOpenHelper
  * @version   1.0
  * @since     1.0
  */
-@Database(entities = [Student::class], version = 3, exportSchema = false)
+@Database(entities = [Student::class], version = 3, exportSchema = true)
 abstract class MyRoomDatabase : RoomDatabase() {
 
     abstract fun studentDao(): StudentDao

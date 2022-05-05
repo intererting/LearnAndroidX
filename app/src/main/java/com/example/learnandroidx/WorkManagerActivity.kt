@@ -27,16 +27,17 @@ class WorkManagerActivity : AppCompatActivity(R.layout.activity_workmanager) {
 //                setExpedited(OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST)
             }.build()
 
-            val myWorkRequest: PeriodicWorkRequest = PeriodicWorkRequestBuilder<MyWork>(1, TimeUnit.HOURS)
-                .setConstraints(constraints)
-                .setBackoffCriteria(
-                    BackoffPolicy.LINEAR,
-                    OneTimeWorkRequest.MIN_BACKOFF_MILLIS,
-                    TimeUnit.MILLISECONDS
-                )
-                .setInputData(workDataOf("name" to "yuliyang"))
-                .addTag("haha")
-                .build()
+            val myWorkRequest: PeriodicWorkRequest =
+                PeriodicWorkRequestBuilder<MyWork>(1, TimeUnit.HOURS)
+                    .setConstraints(constraints)
+                    .setBackoffCriteria(
+                        BackoffPolicy.LINEAR,
+                        OneTimeWorkRequest.MIN_BACKOFF_MILLIS,
+                        TimeUnit.MILLISECONDS
+                    )
+                    .setInputData(workDataOf("name" to "yuliyang"))
+                    .addTag("haha")
+                    .build()
 
             WorkManager
                 .getInstance(this)

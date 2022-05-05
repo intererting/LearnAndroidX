@@ -16,26 +16,26 @@ plugins {
 
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId "com.example.learnandroidx"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
 //        room.schemaLocation：配置并启用将数据库架构导出到给定目录中的 JSON 文件的功能。如需了解详情，请参阅 Room 迁移。
 //        room.incremental：启用 Gradle 增量注解处理器。
 //        room.expandProjection：配置 Room 以重写查询，使其顶部星形投影在展开后仅包含 DAO 方法返回类型中定义的列。
-//        javaCompileOptions {
-//            annotationProcessorOptions {
-//                arguments += [
-//                        "room.schemaLocation"  : "$projectDir/schemas".toString(),
-//                        "room.incremental"     : "true",
-//                        "room.expandProjection": "true"]
-//            }
-//        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation"  : "$projectDir/schemas".toString(),
+                        "room.incremental"     : "true",
+                        "room.expandProjection": "true"]
+            }
+        }
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -73,7 +73,7 @@ class MyTask extends DefaultTask {
     }
 }
 
-tasks.create("helloWorld", MyTask)
+tasks.register("helloWorld", MyTask)
 
 kapt {
     arguments {
